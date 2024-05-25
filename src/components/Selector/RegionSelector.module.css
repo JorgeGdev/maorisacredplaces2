@@ -1,0 +1,19 @@
+/* src/components/RegionSelector.module.css */
+.selectorContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.label {
+    font-weight: bold;
+    margin-right: 10px;
+    font-size: 25px;
+}
+
+.select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}

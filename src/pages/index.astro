@@ -1,0 +1,80 @@
+---
+import { HeroSlider1, HeroSlider2, HeroSlider3, HeroSlider4, HeroSlider5, HeroSlider6 } from "@static/images";
+import Layout from "../layouts/Layout.astro";
+import { Hero } from "@modules/Hero";
+---
+
+<Layout
+    title="Maori Sacred PLaces"
+    description="the best places in New Zealand"
+>
+    <main class="page-content">
+        <Hero
+            client:load
+            heroType="fullPageSlider"
+            data={[
+                {
+                    subtitle: "Northland",
+                    title: "Cape Reinga",
+                    background: HeroSlider1.src,
+                    paragraph:
+                        "This place is sacred to the Māori as the departure point for spirits journeying to their ancestral homeland, Hawaiki. The ancient pohutukawa tree's roots serve as the spirits' pathway. It symbolizes the connection between life and death, reflecting deep cultural and ancestral significance",
+                    button: {
+                        text: "More About Cape Reinga",
+                        link: "https://www.doc.govt.nz/parks-and-recreation/places-to-go/northland/places/te-paki-recreation-reserve/cape-reinga-te-rerenga-wairua/?tab-id=50578",
+                    },
+                },
+                {
+                    subtitle: "Bay Of Plenty",
+                    title: "Rotorua",
+                    background: HeroSlider2.src,
+                    paragraph: "Te Whakarewarewatanga O Te Ope Taua A Wahiao is sacred for its healing thermal waters, rich cultural heritage, sacred sites, and marae. It's a center of ancestral traditions and myths, reflecting deep spiritual connections with the land and significant historical events shaping local tribal identity.",
+                    button: {
+                        text: "More About Rotorua",
+                        link: "https://www.rotoruanz.com/things-to-do/walking-hiking",
+                    },
+                },
+                {
+                    subtitle: "Taranaki / Whanganui",
+                    title: "Mount Taranaki",
+                    background: HeroSlider3.src,
+                    paragraph: "Taranaki Maunga is sacred due to its ancestral personification, spiritual significance, and role in ceremonies. It provides essential natural resources and is central to many myths and legends. The mountain symbolizes strength and protection, deeply connecting local tribes to their heritage and nature.",
+                    button: {
+                        text: "More About Mount Taranaki ",
+                        link: "https://www.newzealand.com/int/feature/national-parks-egmont/",
+                    },
+                },
+                {
+                    subtitle: "Waikato Region",
+                    title: "Lake Taupo",
+                    background: HeroSlider4.src,
+                    paragraph: "Taupō-nui-a-Tia is sacred for its ancestral and mythological origins, life-sustaining resources, and role in important ceremonies. It symbolizes the spiritual connection between land and sky and contains numerous historical and cultural sites, deeply reflecting the heritage and history of local tribes.",
+                    button: {
+                        text: "More About Taupo Lake",
+                        link: "/infinite",
+                    },
+                },
+                {
+                    subtitle: "Hawkes Bay Region",
+                    title: "Te Urewera",
+                    background: HeroSlider5.src,
+                    paragraph: "Te Urewera is sacred due to its ancestral significance, symbolizing Tūhoe identity and independence. The land provides essential resources and contains numerous sacred sites. Rich in mythology, it embodies the deep spiritual and cultural connections between the Tūhoe people and their environment.",
+                    button: {
+                        text: "More About Te Urewera",
+                        link: "https://www.doc.govt.nz/parks-and-recreation/places-to-go/east-coast/places/te-urewera/?tab-id=50578",
+                    },
+                },
+                {
+                    subtitle: "Waikato Region",
+                    title: "Mount Tongariro",
+                    background: HeroSlider6.src,
+                    paragraph: "Tongariro Maunga is sacred due to its ancestral significance, central role in Māori mythology, and spiritual connection. It hosts important ceremonies and provides vital natural resources. The mountain symbolizes strength and protection, emphasizing the Māori relationship with the land and the importance of environmental conservation.",
+                    button: {
+                        text: "More About Mount Tongariro",
+                        link: "/infinite",
+                    },
+                },
+            ]}
+        />
+    </main>
+</Layout>

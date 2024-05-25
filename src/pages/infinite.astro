@@ -1,0 +1,43 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { Hero } from "@modules/Hero";
+import { HeroSlider3 } from "@static/images";
+import { ServiceCards } from "@modules/ServiceCards";
+import { Footer } from "@modules/Footer";
+import places from "../data/places.json"; // Importa el archivo JSON
+
+const cards = places.map(place => ({
+    CODE: place.CODE,
+    region: place.region,
+    NAME: place.NAME,
+    LATITUD: place.LATITUD,
+    LONGITUD: place.LONGITUD,
+    IMAGE_URL: place.IMAGE_URL,
+    iframe: place.iframe,
+    description: place.description,
+    imageURL: `/places/${place.CODE}.jpg` // Construye la ruta de la imagen
+}));
+---
+
+<Layout title="All Maori Places" description="Maori Sacred Places">
+    <main class="page-content">
+        <Hero
+            heroType="ParallaxImage"
+            client:visible
+            data={{
+                image: HeroSlider3.src,
+                content: {
+                    title: "MAORI SACRED PLACES",
+                    paragraph: "Welcome to our comprehensive guide to nearly 200 sacred Māori sites across New Zealand. Each entry includes the specific region, the site's name, its precise location on Google Maps, and a photo to bring these significant places to life. These sacred sites hold deep cultural and spiritual importance for all new zealanders.",
+                },
+            }}
+        />
+        <ServiceCards
+            description="SACRED PLACES"
+            title="Select the Region"
+            client:visible
+            cards={cards}
+        />
+    </main>
+    <Footer />
+</Layout>

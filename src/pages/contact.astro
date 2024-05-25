@@ -1,0 +1,29 @@
+---
+import { HeroSlider1 } from "@static/images";
+import Layout from "../layouts/Layout.astro";
+import { Contact as ContactModule } from "@modules/Contact";
+import { Hero } from "@modules/Hero";
+import { Footer } from "@modules/Footer";
+---
+
+<Layout
+    title="Maori Sacred Places"
+    description="YOUR META DESCRIPTION FOR SEO"
+>
+    <main class="page-content">
+        <Hero
+            heroType="ParallaxImage"
+            client:load
+            data={{
+                image: HeroSlider1.src,
+                content: {
+                    title: "Closing Reflection",
+                    paragraph:
+                        "exploring the sacred Māori sites highlights the importance of knowing, respecting, and preserving these places that are fundamental to the cultural and spiritual identity of New Zealand. For all New Zealanders, these sites represent an invaluable heritage that must be protected and honored. Additionally, it is essential for visitors from other countries to familiarize themselves with the rich culture of this land, respect its people, and contribute to the care and conservation of these sacred places. By doing so, we not only honor the history and traditions of the Māori but also promote a deeper understanding and appreciation for the cultural and natural diversity of New Zealand.",
+                },
+            }}
+        />
+        <ContactModule client:load />
+    </main>
+    <Footer />
+</Layout>
