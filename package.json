@@ -10,7 +10,7 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/check": "^0.5.9",
+    "@astrojs/check": "^0.5.10",
     "@astrojs/react": "^3.1.0",
     "@astrojs/sitemap": "^3.1.4",
     "@emotion/react": "^11.11.4",
@@ -24,7 +24,7 @@
     "react-hook-form": "^7.51.3",
     "sitemap": "^7.1.1",
     "swiper": "^11.1.1",
-    "typescript": "^5.4.3",
+    "typescript": "^5.4.5",
     "vite-plugin-compression": "^0.5.1",
     "yarn": "^1.22.22",
     "zod": "^3.22.4"
